@@ -1,6 +1,6 @@
 CC=cc
 CFLAGS=-Wall -Wextra -std=c11
-LDLIBS=-lncurses
+LDLIBS=-lncursesw
 TARGET=Show
 SRC=Show.c
 
