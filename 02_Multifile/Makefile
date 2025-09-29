@@ -13,7 +13,7 @@ GENERATES = prog prog-a prog-so liboutput_static.a liboutput.so \
             out_3_prog out_3_proga out_3_progso
 TRASH = *.o *~ o.* $(OBJ:.o=.d) $(PIC_OBJ:.o=.d)
 
-.PHONY: all clean distclean test help
+.PHONY: all clean distclean test
 
 all: prog prog-a prog-so
 
@@ -41,7 +41,6 @@ liboutput_static.a: fun.o const.o
 
 liboutput.so: $(PIC_OBJ)
 	$(CC) -shared -o $@ $^
-
 
 CYAN = \033[0;36m
 YELLOW = \033[0;33m
