@@ -66,10 +66,3 @@ test: all
 
 clean:
 	$(RM) -v $(TRASH) $(GENERATES) $(PIC_OBJ)
-
-help:
-	@echo -e "$(CYAN)Targets:$(RESET)"
-	@echo -e "$(CYAN)  make [all]     - build binaries and libraries$(RESET)"
-	@echo -e "$(CYAN)  make test      - run tests$(RESET)"
-	@echo -e "$(CYAN)  make clean     - remove objects and outputs$(RESET)"
-	@echo -e "$(CYAN)  make distclean - remove all generated files$(RESET)"
