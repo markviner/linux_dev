@@ -1,0 +1,16 @@
+@@@
+iter=28, start=-100, end=100, step=3, current=-19
+@@@
+iter=29, start=-100, end=100, step=3, current=-16
+@@@
+iter=30, start=-100, end=100, step=3, current=-13
+@@@
+iter=31, start=-100, end=100, step=3, current=-10
+@@@
+iter=32, start=-100, end=100, step=3, current=-7
+@@@
+iter=33, start=-100, end=100, step=3, current=-4
+@@@
+iter=34, start=-100, end=100, step=3, current=-1
+@@@
+iter=35, start=-100, end=100, step=3, current=2
