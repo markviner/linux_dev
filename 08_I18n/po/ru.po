@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guessnum 1.0\n"
 "Report-Msgid-Bugs-To: example@example.com\n"
-"POT-Creation-Date: 2025-11-17 13:51+0300\n"
+"POT-Creation-Date: 2025-11-17 14:12+0300\n"
 "PO-Revision-Date: 2025-11-17 09:51+0000\n"
 "Last-Translator: Dmitry <example@email.com>\n"
 "Language-Team: Russian <example@email.com>\n"
@@ -13,24 +13,24 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/main.c:31
+#: src/main.c:14
 msgid "Error: input closed"
 msgstr "Ошибка: ввод закрыт"
 
-#: src/main.c:38
+#: src/main.c:21
 msgid "Please answer Yes or No"
 msgstr "Пожалуйста, отвечайте Yes или No"
 
-#: src/main.c:48
+#: src/main.c:31
 msgid "Think of a number from 1 to 100."
 msgstr "Загадайте число от 1 до 100."
 
-#: src/main.c:55
+#: src/main.c:38
 #, c-format
 msgid "Is your number greater than %d? (Yes/No): "
 msgstr "Ваше число больше %d? (Yes/No): "
 
-#: src/main.c:63
+#: src/main.c:46
 #, c-format
 msgid "Your number is %d!\n"
 msgstr "Ваше число — %d!\n"
