@@ -1,0 +1,35 @@
+--- maze2.c	2025-11-24 12:37:30.172984406 +0300
++++ maze3.c	2025-11-24 12:38:39.131106059 +0300
+@@ -90,20 +90,26 @@
+ }
+ 
+ int main(int argc, char *argv[]) {
+-    if (argc > 1 && argv[1][0] && argv[1][1]) {
+-        PASS = argv[1][0];
+-        WALL = argv[1][1];
++    unsigned int seed = time(NULL);
++    
++    if (argc > 1) {
++        seed = atoi(argv[1]);
++    }
++    
++    if (argc > 2 && argv[2][0] && argv[2][1]) {
++        PASS = argv[2][0];
++        WALL = argv[2][1];
+     }
+     
+-    if (argc > 2) {
+-        SIZE = atoi(argv[2]);
++    if (argc > 3) {
++        SIZE = atoi(argv[3]);
+         if (SIZE < 2) {
+             printf("SIZE < 2 -> defaulting to 2\n");
+             SIZE = 2;
+         }
+     }
+     
+-    srand(time(NULL));
++    srand(seed);
+     
+     maze = malloc(SIZE * sizeof(Cell*));
+     for (int i = 0; i < SIZE; i++) {

@@ -1,0 +1,82 @@
+--- maze.c	2025-11-24 12:02:58.683432446 +0300
++++ maze1.c	2025-11-24 12:36:44.501566150 +0300
+@@ -2,14 +2,14 @@
+ #include <stdlib.h>
+ #include <time.h>
+ 
+-#define SIZE 6
++int SIZE = 6;
+ 
+ typedef struct {
+     int visited;
+     int walls[4];
+ } Cell;
+ 
+-Cell maze[SIZE][SIZE];
++Cell **maze;
+ 
+ void init_maze() {
+     for (int i = 0; i < SIZE; i++) {
+@@ -24,22 +24,18 @@
+ 
+ void generate_maze(int x, int y) {
+     maze[x][y].visited = 1;
+-    
+     int dirs[4][2] = {{-1,0}, {0,1}, {1,0}, {0,-1}};
+     int order[4] = {0, 1, 2, 3};
+-    
+     for (int i = 0; i < 4; i++) {
+         int j = rand() % 4;
+         int tmp = order[i];
+         order[i] = order[j];
+         order[j] = tmp;
+     }
+-    
+     for (int i = 0; i < 4; i++) {
+         int dir = order[i];
+         int nx = x + dirs[dir][0];
+         int ny = y + dirs[dir][1];
+-        
+         if (nx >= 0 && nx < SIZE && ny >= 0 && ny < SIZE && !maze[nx][ny].visited) {
+             maze[x][y].walls[dir] = 0;
+             maze[nx][ny].walls[(dir + 2) % 4] = 0;
+@@ -51,7 +47,6 @@
+ void print_maze() {
+     int height = SIZE * 2 + 1;
+     int width = SIZE * 2 + 1;
+-    
+     for (int i = 0; i < height; i++) {
+         for (int j = 0; j < width; j++) {
+             if (i % 2 == 0) {
+@@ -92,12 +87,30 @@
+     }
+ }
+ 
+-int main() {
++int main(int argc, char *argv[]) {
++    if (argc > 1) {
++        SIZE = atoi(argv[1]);
++        if (SIZE < 2) {
++            printf("SIZE < 2 -> defaulting to 2\n");
++            SIZE = 2;
++        }
++    }
++    
+     srand(time(NULL));
+     
++    maze = malloc(SIZE * sizeof(Cell*));
++    for (int i = 0; i < SIZE; i++) {
++        maze[i] = malloc(SIZE * sizeof(Cell));
++    }
++    
+     init_maze();
+     generate_maze(0, 0);
+     print_maze();
+     
++    for (int i = 0; i < SIZE; i++) {
++        free(maze[i]);
++    }
++    free(maze);
++    
+     return 0;
+ }

@@ -1,0 +1,70 @@
+--- maze1.c	2025-11-24 12:36:44.501566150 +0300
++++ maze2.c	2025-11-24 12:37:30.172984406 +0300
+@@ -3,6 +3,8 @@
+ #include <time.h>
+ 
+ int SIZE = 6;
++char PASS = '.';
++char WALL = '#';
+ 
+ typedef struct {
+     int visited;
+@@ -51,17 +53,17 @@
+         for (int j = 0; j < width; j++) {
+             if (i % 2 == 0) {
+                 if (j % 2 == 0) {
+-                    printf("#");
++                    printf("%c", WALL);
+                 } else {
+                     int cell_y = j / 2;
+                     int cell_x = i / 2;
+                     if (i == 0 || i == height - 1) {
+-                        printf("#");
++                        printf("%c", WALL);
+                     } else {
+                         if (maze[cell_x - 1][cell_y].walls[2]) {
+-                            printf("#");
++                            printf("%c", WALL);
+                         } else {
+-                            printf(".");
++                            printf("%c", PASS);
+                         }
+                     }
+                 }
+@@ -70,16 +72,16 @@
+                     int cell_x = i / 2;
+                     int cell_y = j / 2;
+                     if (j == 0 || j == width - 1) {
+-                        printf("#");
++                        printf("%c", WALL);
+                     } else {
+                         if (maze[cell_x][cell_y - 1].walls[1]) {
+-                            printf("#");
++                            printf("%c", WALL);
+                         } else {
+-                            printf(".");
++                            printf("%c", PASS);
+                         }
+                     }
+                 } else {
+-                    printf(".");
++                    printf("%c", PASS);
+                 }
+             }
+         }
+@@ -88,8 +90,13 @@
+ }
+ 
+ int main(int argc, char *argv[]) {
+-    if (argc > 1) {
+-        SIZE = atoi(argv[1]);
++    if (argc > 1 && argv[1][0] && argv[1][1]) {
++        PASS = argv[1][0];
++        WALL = argv[1][1];
++    }
++    
++    if (argc > 2) {
++        SIZE = atoi(argv[2]);
+         if (SIZE < 2) {
+             printf("SIZE < 2 -> defaulting to 2\n");
+             SIZE = 2;
