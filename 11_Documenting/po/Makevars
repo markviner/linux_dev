@@ -1,0 +1,6 @@
+DOMAIN = guessnum
+subdir = po
+top_builddir = ..
+XGETTEXT_OPTIONS = --keyword=_ --keyword=N_
+COPYRIGHT_HOLDER = Example
+MSGID_BUGS_ADDRESS = example@example.com
