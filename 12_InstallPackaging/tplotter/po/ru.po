@@ -1,0 +1,72 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: tplotter 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-16 12:00+0000\n"
+"PO-Revision-Date: 2025-12-16 12:00+0000\n"
+"Last-Translator: Dmitry\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.c
+msgid "Usage: %s <expression1> [expression2] ...\n"
+msgstr "Использование: %s <выражение1> [выражение2] ...\n"
+
+#: src/main.c
+msgid "Example: %s \"sin(x)\" \"cos(x)\"\n"
+msgstr "Пример: %s \"sin(x)\" \"cos(x)\"\n"
+
+#: src/main.c
+msgid ""
+"\n"
+"Supported functions: sin, cos, tan, sqrt, abs, log, log2\n"
+msgstr ""
+"\n"
+"Поддерживаемые функции: sin, cos, tan, sqrt, abs, log, log2\n"
+
+#: src/main.c
+msgid "Supported operations: +, -, *, /, ^\n"
+msgstr "Поддерживаемые операции: +, -, *, /, ^\n"
+
+#: src/main.c
+msgid "Error: Memory allocation failed\n"
+msgstr "Ошибка: Не удалось выделить память\n"
+
+#: src/main.c
+msgid "Plotting %d function(s)...\n"
+msgstr "Построение графика %d функции(й)...\n"
+
+#: src/main.c
+msgid "Error: Invalid expression '%s'\n"
+msgstr "Ошибка: Неверное выражение '%s'\n"
+
+#: src/main.c
+msgid "Function %d: %s\n"
+msgstr "Функция %d: %s\n"
+
+#: src/main.c
+msgid "Error: Failed to evaluate expression at x=%.2f\n"
+msgstr "Ошибка: Не удалось вычислить выражение при x=%.2f\n"
+
+#: src/main.c
+msgid ""
+"\n"
+"Plot: X[%.1f, %.1f] Y[%.1f, %.1f]\n"
+msgstr ""
+"\n"
+"График: X[%.1f, %.1f] Y[%.1f, %.1f]\n"
+
+#: src/main.c
+msgid ""
+"\n"
+"Legend:\n"
+msgstr ""
+"\n"
+"Легенда:\n"
+
+#: src/main.c
+msgid "Function"
+msgstr "Функция"

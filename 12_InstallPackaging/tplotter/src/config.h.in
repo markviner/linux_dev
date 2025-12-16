@@ -1,0 +1,5 @@
+#pragma once
+
+#define PACKAGE "tplotter"
+#define LOCALEDIR "@CMAKE_INSTALL_FULL_LOCALEDIR@"
+

@@ -1,0 +1,80 @@
+.TH TPLOTTER 1 "December 2025" "tplotter 1.0.0" "User Commands"
+.SH NAME
+tplotter \- terminal function plotter
+.SH SYNOPSIS
+.B tplotter
+[\fIOPTIONS\fR]
+.I EXPRESSION
+[\fIEXPRESSION\fR...]
+.SH DESCRIPTION
+.B tplotter
+is a simple command-line tool for plotting mathematical functions in the terminal using ASCII art.
+It supports multiple functions on the same plot with color-coded output.
+.SH OPTIONS
+.TP
+.BR \-h ", " \-\-help
+Display help message and exit.
+.TP
+.BR \-v ", " \-\-version
+Display version information and exit.
+.SH EXPRESSIONS
+Mathematical expressions can contain:
+.TP
+.B Variables
+x (the independent variable)
+.TP
+.B Operators
++ (addition), - (subtraction), * (multiplication), / (division), ^ (power)
+.TP
+.B Functions
+sin(x), cos(x), tan(x) - trigonometric functions
+.br
+log(x) - base-10 logarithm
+.br
+ln(x) - natural logarithm
+.br
+sqrt(x) - square root
+.br
+exp(x) - exponential function
+.TP
+.B Constants
+pi - π (3.14159...)
+.br
+e - Euler's number (2.71828...)
+.SH EXAMPLES
+Plot sine function:
+.RS
+.B tplotter "sin(x)"
+.RE
+
+Plot multiple functions:
+.RS
+.B tplotter "sin(x)" "cos(x)" "x^2/10"
+.RE
+
+Plot complex expression:
+.RS
+.B tplotter "sin(x)^2 + cos(x)^2"
+.RE
+
+Plot with constants:
+.RS
+.B tplotter "sin(2*pi*x)"
+.RE
+.SH EXIT STATUS
+.TP
+.B 0
+Success
+.TP
+.B 1
+Invalid expression or other error
+.SH AUTHOR
+Written by Student for educational purposes.
+.SH BUGS
+Report bugs to: example@example.com
+.SH COPYRIGHT
+Copyright \(co 2025 Dmitry G.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+.SH SEE ALSO
+gnuplot(1), bc(1), octave(1)
